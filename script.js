@@ -27,7 +27,7 @@ let countriesValidation = false;
 
 const validation = (e, validation, element) => {
   const information = e.target.parentElement.children[1];
-  formBtn.disable =
+  formBtn.disabled =
     !usernameValidation ||
     !emailValidation ||
     !phoneValidation ||
@@ -61,7 +61,7 @@ emailInput.addEventListener('input', (e) => {
   validation(e, emailValidation, emailInput);
 });
 
-countries.addEventListener('input', (e) => {
+countries.addEventListener('input', e => {
   const optionSelected = [...e.target.children].find(
     (option) => option.selected
   );
