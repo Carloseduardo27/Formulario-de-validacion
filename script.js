@@ -66,7 +66,7 @@ countries.addEventListener('input', e => {
     (option) => option.selected
   );
   phoneCode.innerHTML = `+${optionSelected.value}`;
-  countriesValidation = optionSelected.value == '' ? false : true;
+  countriesValidation = optionSelected.value === '' ? false : true;
   countries.classList.add('correct');
   phoneCode.classList.add('correct');
   validation(e, null, null);
